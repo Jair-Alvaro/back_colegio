@@ -78,6 +78,9 @@ class TblColegio(models.Model):
         managed = False
         db_table = 'tbl_colegio'
 
+    def __str__(self):
+        return self.colegio_nombre        
+
 
 class TblEmpleado(models.Model):
     empleado_id = models.AutoField(primary_key=True)
@@ -231,6 +234,8 @@ class TblZona(models.Model):
         managed = False
         db_table = 'tbl_zona'
 
+    def __str__(self):
+        return self.zona_nombre
 
 class TipoGasto(models.Model):
     tipo_gasto_id = models.AutoField(primary_key=True)
